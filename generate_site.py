@@ -7,7 +7,7 @@ ROOT = pathlib.Path(__file__).parent
 SRC_POSTS = ROOT / "posts"
 SRC_PAGES = ROOT / "pages"
 
-DST_SITE  = ROOT / "site"
+DST_SITE  = ROOT / "docs"
 TEMPLATES = ROOT / "templates"
 
 env = Environment(
@@ -92,4 +92,6 @@ if __name__ == "__main__":
     render_page('contact')
     items = render_posts()
     render_index(items)
+    (DST_SITE / '.nojekyll').write_text('')
+    (DST_SITE / 'CNAME').write_text('joao-abrantes.com')
     print("Site rendered →", DST_SITE)
