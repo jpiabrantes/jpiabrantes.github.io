@@ -38,7 +38,7 @@ def render_posts():
         post = frontmatter.load(md_path)
         post_html = md.convert(post.content)
         post_date = post.get("date").strftime("%Y-%m-%d")
-        slug = post['title'].lower().replace(' ', '-').replace('?','').replace(':', '')
+        slug = post['title'].lower().replace(' ', '-').replace('?','').replace(':', '').replace(',', '').replace('.', '')
         out_file = DST_SITE / f"{slug}.html"
         out_file.write_text(
             post_tpl.render(
@@ -46,13 +46,14 @@ def render_posts():
                 title=post["title"]
             )
         )
-        index_items.append({"title": post["title"], "slug": slug, "date": post_date})
+        index_items.append({"title": post["title"], "slug": slug, "date": post_date, "draft": post.get('draft', False)})
         md.reset()  # important when re-using the converter
     return index_items
 
 def render_index(items):
     # newest first
     items = sorted(items, key=lambda x: x["date"], reverse=True)
+    items = list(filter(lambda x: not x.get('draft', False), items))
     tpl   = env.get_template("base.html")
 
     # helper → "SEPTEMBER 2022"
@@ -76,7 +77,7 @@ def render_index(items):
     ) + "\n</ul>"
 
     (DST_SITE / "index.html").write_text(
-        tpl.render(title="Home", content=html_list)
+        tpl.render(title="abranti's website", content=html_list)
     )
 
 def copy_static():
@@ -93,5 +94,5 @@ if __name__ == "__main__":
     items = render_posts()
     render_index(items)
     (DST_SITE / '.nojekyll').write_text('')
-    (DST_SITE / 'CNAME').write_text('joao-abrantes.com')
+    (DST_SITE / 'CNAME').write_text('abranti.com')
     print("Site rendered →", DST_SITE)

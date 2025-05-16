@@ -40,4 +40,4 @@ The current boom in generative AI was achieved by making the AI predict the next
 
 To make AI produce the next hit we should train it to generate music chronologically. Each month we look at the music at the top of the billboard charts and try to measure its predictability. How many snippets were hard to predict? How many were easy? We try to figure out what’s the optimal amount of unpredictability to have in a song. We then make our AI output songs with those parameters.
 
-If you liked this post follow me on [twitter](https://twitter.com/joaoabrantis) and check my other AI post [Mimicking Evolution with Reinforcement Learning](https://joao-abrantes.com/posts/mimicking-evolution-with-reinforcement-learning/).
+If you liked this post follow me on [twitter](https://twitter.com/joaoabrantis) and check my other AI post [Mimicking Evolution with Reinforcement Learning](mimicking-evolution-with-reinforcement-learning/).
