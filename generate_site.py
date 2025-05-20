@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import pathlib, shutil, datetime
 import markdown, frontmatter
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -9,6 +10,7 @@ SRC_PAGES = ROOT / "pages"
 
 DST_SITE  = ROOT / "docs"
 TEMPLATES = ROOT / "templates"
+
 
 env = Environment(
     loader=FileSystemLoader(TEMPLATES),
@@ -31,6 +33,7 @@ def render_page(page_name: str):
             title=page['title'], content=html)
     )
 
+to_delete_from_slug = ['?', ':', ',', '.', '!', "'"]
 def render_posts():
     post_tpl = env.get_template("post.html")
     index_items = []
@@ -38,15 +41,23 @@ def render_posts():
         post = frontmatter.load(md_path)
         post_html = md.convert(post.content)
         post_date = post.get("date").strftime("%Y-%m-%d")
-        slug = post['title'].lower().replace(' ', '-').replace('?','').replace(':', '').replace(',', '').replace('.', '')
+        subtitle = post.get("subtitle", "")
+        title = post["title"]
+        if len(subtitle):
+            title += f": {subtitle}" 
+        slug = post['title'].lower().replace(' ', '-')
+        for c in to_delete_from_slug:
+            slug = slug.replace(c, '')
         out_file = DST_SITE / f"{slug}.html"
         out_file.write_text(
             post_tpl.render(
-                post={"title": post["title"], "date": post_date, "html": post_html},
-                title=post["title"]
+                post={"title": post["title"], "date": post_date, "html": post_html, "subtitle": subtitle},
+                description=post.get("description", None),
+                title=title
             )
         )
-        index_items.append({"title": post["title"], "slug": slug, "date": post_date, "draft": post.get('draft', False)})
+        index_items.append({"title": post["title"], "slug": slug, "date": post_date,
+                            "draft": post.get('draft', False), "subtitle": subtitle})
         md.reset()  # important when re-using the converter
     return index_items
 
@@ -68,13 +79,19 @@ def render_index(items):
     '''.strip()
 
 
-    html_list = about_link + "\n<ul class=\"post-list\">\n" + "\n".join(
-        f'  <li class="post-item">'
-        f'    <div class="post-meta">{pretty(i["date"])}</div>'
-        f'    <h2 class="post-title"><a href="{i["slug"]}.html">{i["title"]}</a></h2>'
-        f'  </li>'
-        for i in items
-    ) + "\n</ul>"
+    li_elements = []
+    for i in items:
+        title = i["title"]
+        if i.get("subtitle", ""):
+            title += f': {i["subtitle"]}'
+        li_elements.append(
+            f'  <li class="post-item">'
+            f'    <div class="post-meta">{pretty(i["date"])}</div>'
+            f'    <h2 class="post-title"><a href="{i["slug"]}.html">{title}</a></h2>'
+            f'  </li>'
+        )
+    
+    html_list = about_link + "\n<ul class=\"post-list\">\n" + "\n".join(li_elements)+ "\n</ul>"
 
     (DST_SITE / "index.html").write_text(
         tpl.render(title="abranti's website", content=html_list)

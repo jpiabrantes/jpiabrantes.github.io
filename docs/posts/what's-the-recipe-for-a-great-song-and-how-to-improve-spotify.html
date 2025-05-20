@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>What&#39;s the recipe for a great song and how to improve Spotify?</title>
+    <link rel="icon" href="/static/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <button onclick="location.href='index.html'">All Articles</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">🌙/☀️</button>
+    </header>
+    <main>
+        
+<article>
+    <div class="post-header">
+        <h1>What&#39;s the recipe for a great song and how to improve Spotify?</h1>
+        
+    </div>
+    <p><em>Published on 2023-09-27</em></p>
+    <p>Our brain is constantly predicting what sound it will hear next and then checking if it got it right. Getting it right every now and then is a lot of fun! Rhymes, beats, and patterns help us guess what’s coming next. However, getting it right all the time is just boring. The music is too simple, too repetitive. Occasionally, failing to predict is necessary to keep it interesting! It makes us curious. What did I get wrong? Why? However, there’s a limit. Failing all the time is just frustrating. The music is too noisy, too random. To sum up, different degrees of difficulty lead to different emotions:</p>
+<ul>
+<li>😂 Occasionally getting it right is <strong>fun.</strong> </li>
+<li>🥱 Always getting it right is <strong>boring.</strong></li>
+<li>👀 Occasionally getting it wrong is <strong>curious.</strong></li>
+<li>😩 Always getting it wrong is <strong>frustrating.</strong></li>
+</ul>
+<p>So, we get pop music. Music that’s easy to predict - you love the first time you hear it, but you also get bored of it quite fast. You also get music that you learn to love. It takes a while to fully enjoy it, but eventually, you’ll be singing along and even mimicking the random noises of the guitar solo. This music has a longer shelf time.</p>
+<p>I think that looking at music through this lens can help us make better playlists and make better music.</p>
+<h3>Playlists. How to improve Spotify?</h3>
+<p>In the process of learning, there is a concept called spaced repetition. It says that there is an optimal time to review a concept you’re trying to learn. If you wait a long time to review a concept, then you already forgot everything about it and you’re essentially learning it from scratch. You wasted your initial effort! If you don’t wait long enough before reviewing the concept, then it is too easy for your brain to recall, and it won’t help you make the concept deeply  engraved in your memory. So you’re also wasting effort. The optimal time to review depends on how many times you already review it in the past and how easy it was for you to recall the concept.</p>
+<p>I believe the same happens in music. We should have a radio station that only plays old songs that were popular X months ago. X being the optimal time for us to forget enough of the song to make it “<em>not boring</em>” again. Spotify could make this at a personalised level. It knows the songs we heard over and over until they got boring. Now it should wait for the optimal time until it let us <em>“review it”</em>.</p>
+<h3>Music. How to improve pop music?</h3>
+<p>This framework predicts that the next hit won’t be completely different from all the previous hits. That would be a song that is too hard to predict, and therefore, frustrating. The next hit, will have many of the fashionable patterns of its epoch but it will introduce one surprising innovation. A silence when there’s usually a beat. A drop. An extra beat. A scream. A whisper.</p>
+<p>I think AI will be great at this. So let’s make the connection with AI 👇</p>
+<h3>How to get AI to produce the next hit?</h3>
+<p>The current boom in generative AI was achieved by making the AI predict the next sound (wavenet), the next word (gpt), and the next pixel (stable diffusion). This is called self-supervised learning. I believe humans do this all time, not just for music, but for every sensory input.</p>
+<p>To make AI produce the next hit we should train it to generate music chronologically. Each month we look at the music at the top of the billboard charts and try to measure its predictability. How many snippets were hard to predict? How many were easy? We try to figure out what’s the optimal amount of unpredictability to have in a song. We then make our AI output songs with those parameters.</p>
+<p>If you liked this post follow me on <a href="https://twitter.com/joaoabrantis">twitter</a> and check my other AI post <a href="posts/mimicking-evolution-with-reinforcement-learning/">Mimicking Evolution with Reinforcement Learning</a>.</p>
+</article>
+
+    </main>
+    <footer>Tech Entrepreneur and Researcher into AI and Markets<br><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a></footer>
+    <script>
+        (() => {
+          const root  = document.documentElement;
+          const btn   = document.getElementById('theme-toggle');
+          const store = localStorage;
+          const DARK  = 'dark';
+          const LIGHT = 'light';
+        
+          /* 1 ▸ restore saved choice, if any */
+          const saved = store.getItem('theme');
+          if (saved === DARK || saved === LIGHT) {
+              root.setAttribute('data-theme', saved);
+          }
+        
+          /* helper: is the page currently dark? */
+          const isDark = () => {
+              const attr = root.getAttribute('data-theme');
+              return attr ? attr === DARK
+                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          };
+        
+          /* 2 ▸ flip on click */
+          btn?.addEventListener('click', () => {
+              const next = isDark() ? LIGHT : DARK;
+              root.setAttribute('data-theme', next);
+              store.setItem('theme', next);
+          });
+        })();
+        </script>
+</body>
+</html>

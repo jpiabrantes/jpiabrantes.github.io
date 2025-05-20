@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <article>
-    <h1>{{ post.title }}</h1>
+    <div class="post-header">
+        <h1>{{ post.title }}</h1>
+        {% if post.subtitle %}
+            <p class="subtitle">{{ post.subtitle }}</p>
+        {% endif %}
+    </div>
     <p><em>Published on {{ post.date }}</em></p>
     {{ post.html|safe }}
 </article>

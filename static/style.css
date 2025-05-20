@@ -104,12 +104,19 @@ h1,h2,h3,h4,h5,h6{
     margin:2.2rem 0 .8rem;
     font-weight:700;
 }
-h1{ font-size:2rem;   border-bottom:2px solid var(--border); padding-bottom:.4rem; text-align: center;}
+h1{ font-size:2rem; text-align: center; margin-bottom: 0.8rem;}
 h2{ font-size:1.6rem; }
 h3{ font-size:1.3rem; }
 h4{ font-size:1.1rem; }
 h5{ font-size:1rem; }
 h6{ font-size:.9rem; }
+
+.post-header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.6rem;   /* space below subtitle */
+    margin-bottom: 1.5rem;    /* space before the date/body */
+    text-align: center;       /* if you still want center alignment */
+}
 
 /* paragraphs & lists */
 p, ul, ol{ margin:1rem 0; }
@@ -230,4 +237,14 @@ font-weight: 500;
 
 .top-links a:hover {
 color: var(--accent-soft);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--fg);
+    opacity: 0.8;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
 }

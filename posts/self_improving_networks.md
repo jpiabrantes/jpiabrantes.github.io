@@ -1,11 +1,13 @@
 ---
 template: post
-title: More Markets, Less AI.
-slug: how-to-brainstorm
-draft: true
+title: Self-Improving Networks
+subtitle: The Deep Link Between AI and Markets
+draft: False
+description: >-
+    There is are a few underlying pricincples that make AI and Markets self-improving networks.
 date: 2025-05-15
 ---
-AI is about self-improving neural networks, and markets are about self-improving networks of traders. Self-improving Networks, of any kind, have a lot in common - they follow the same design principles to get better with experience. In fact, most tasks traditionally tackled by AI can be reframed as market design problems (examples on this later) - and AI itself is increasingly trading on markets.
+AI is about self-improving neural networks, and markets are about self-improving networks of traders. Self-improving Networks, of any kind, have a lot in common - they follow the same design principles to get better with experience. They also overlap, most tasks traditionally tackled by AI can be reframed as market design problems (examples on this later) - and AI itself is increasingly trading on markets.
 
 However, these two types of networks are also very different in nature. AI improves with more centralisation: the bigger model, with more data and more compute wins. Whereas markets improve with more decentralisation: the market with more participants, more diversity of ideas and lower barriers to entry wins.
 
@@ -39,7 +41,7 @@ In AI, gradients flow through the network, adjusting the influence of each neuro
 
 Prediction markets have been designed to solve the classical Supervised Learning tasks such as classification and regression. The math makes it so that the market price is linked to its estimated probability. Traders can profit by making trades that move the market from an inaccurate estimate to an accurate one. But, once the market estimate is correct, no one can make it "more correct", and so no one will be able to profit anymore. 
 
-These markets can handle a variety of tasks: classification ("Who will be the next U.S. president?"), regression ("How many cars will Tesla produce next year?), and even conditional predictions ("if Elon is fired, how many cars will it build next year?"). Conditional markets are especially useful for decision-making, as they predict the effects of actions before they are taken. I won't go much into prediction markets as they are already well covered in other places [[1]](https://www.youtube.com/watch?v=4yZKGbq1YmA), [[2]](https://mason.gmu.edu/~rhanson/futarchy2013.pdf) and [[3]](https://timroughgarden.org/f16/l/l18.pdf).
+These markets can handle a variety of tasks: classification ("Who will be the next U.S. president?"), regression ("How many cars will Tesla produce next year?), and even conditional predictions ("if Elon is fired, how many cars will Tesla build next year?"). Conditional markets are especially useful for decision-making, as they predict the effects of actions before they are taken. I won't go much into prediction markets as they are already well covered in other places [[1]](https://www.youtube.com/watch?v=4yZKGbq1YmA), [[2]](https://mason.gmu.edu/~rhanson/futarchy2013.pdf) and [[3]](https://timroughgarden.org/f16/l/l18.pdf).
 
 ## Supply Chain = Reinforcement Learning
 

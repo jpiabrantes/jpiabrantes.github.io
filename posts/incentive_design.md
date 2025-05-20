@@ -93,5 +93,3 @@ This [blogpost](https://evanjconrad.com/posts/crypto-use-cases) mentions other e
 I am currently working on an incentive design to create a newspaper to maximise readers' satisfaction.
 
 At every publication, the newspaper gets better at fulfilling its goal and pays all participants according to their contributions.
-
-Subscribe to this [blog](http://eepurl.com/gYv6Kn) or give me a <a href="https://www.twitter.com/joaoabrantis">follow</a> on Twitter to get the updates 🤝

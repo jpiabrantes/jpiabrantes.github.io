@@ -8,7 +8,7 @@ template: "page"
 
 Hey there! 
 
-I'm João, welcome to my personal page.
+I'm João Abrantes (or abranti!), welcome to my personal page.
 
 I alternate between research and building products.
 
