@@ -4,14 +4,15 @@ title: Self-Improving Networks
 subtitle: The Deep Link Between AI and Markets
 draft: False
 description: >-
-    There is are a few underlying pricincples that make AI and Markets self-improving networks.
+  There is are a few underlying principles that make AI and Markets self-improving networks.
 date: 2025-05-15
 ---
+
 AI is about self-improving neural networks, and markets are about self-improving networks of traders. Self-improving Networks, of any kind, have a lot in common - they follow the same design principles to get better with experience. They also overlap, most tasks traditionally tackled by AI can be reframed as market design problems (examples on this later) - and AI itself is increasingly trading on markets.
 
 However, these two types of networks are also very different in nature. AI improves with more centralisation: the bigger model, with more data and more compute wins. Whereas markets improve with more decentralisation: the market with more participants, more diversity of ideas and lower barriers to entry wins.
 
-In a decentralised World those who find an important truth, by luck or skill, can feed it to the market, and as the world gains from this new knowledge, so does the individual. This dynamic is at the heart of every story worth telling: [the hero’s journey](https://en.wikipedia.org/wiki/Hero%27s_journey), where discovery benefits both the seeker and the society. 
+In a decentralised World those who find an important truth, by luck or skill, can feed it to the market, and as the world gains from this new knowledge, so does the individual. This dynamic is at the heart of every story worth telling: [the hero’s journey](https://en.wikipedia.org/wiki/Hero%27s_journey), where discovery benefits both the seeker and the society.
 
 But in a centralised world, only the AI God knows and does it all. In such a world, what will humans dream about? What stories will they have left to tell?
 
@@ -27,19 +28,18 @@ To cook self-improving networks, we need three ingredients:
 
 Here are a few examples:
 
-|                         | Neural Networks     | Drivers Network (Uber)         | Supply Chain                        |
-|-------------------------|--------------------|-------------------------------|-------------------------------------|
-| **Nodes of the Network**| Neurons            | Drivers                       | Suppliers                           |
-| **Objective**           | Loss function      | Service Quality               | Profit                              |
-| **Attribution**         | Backpropagation    | User Ratings & Performance Metrics | Quality Control                |
-| **Adjustment**          | Weight update      | Show Good Drivers More Often  | Bad Suppliers Get Replaced by Competition |
-
+|                          | Neural Networks | Drivers Network (Uber)             | Supply Chain                              |
+| ------------------------ | --------------- | ---------------------------------- | ----------------------------------------- |
+| **Nodes of the Network** | Neurons         | Drivers                            | Suppliers                                 |
+| **Objective**            | Loss function   | Service Quality                    | Profit                                    |
+| **Attribution**          | Backpropagation | User Ratings & Performance Metrics | Quality Control                           |
+| **Adjustment**           | Weight update   | Show Good Drivers More Often       | Bad Suppliers Get Replaced by Competition |
 
 In AI, gradients flow through the network, adjusting the influence of each neuron based on its contribution - just as, in markets, money flows between traders, rewarding merit.
 
 ## Prediction Markets = Supervised Learning
 
-Prediction markets have been designed to solve the classical Supervised Learning tasks such as classification and regression. The math makes it so that the market price is linked to its estimated probability. Traders can profit by making trades that move the market from an inaccurate estimate to an accurate one. But, once the market estimate is correct, no one can make it "more correct", and so no one will be able to profit anymore. 
+Prediction markets have been designed to solve the classical Supervised Learning tasks such as classification and regression. The math makes it so that the market price is linked to its estimated probability. Traders can profit by making trades that move the market from an inaccurate estimate to an accurate one. But, once the market estimate is correct, no one can make it "more correct", and so no one will be able to profit anymore.
 
 These markets can handle a variety of tasks: classification ("Who will be the next U.S. president?"), regression ("How many cars will Tesla produce next year?), and even conditional predictions ("if Elon is fired, how many cars will Tesla build next year?"). Conditional markets are especially useful for decision-making, as they predict the effects of actions before they are taken. I won't go much into prediction markets as they are already well covered in other places [[1]](https://www.youtube.com/watch?v=4yZKGbq1YmA), [[2]](https://mason.gmu.edu/~rhanson/futarchy2013.pdf) and [[3]](https://timroughgarden.org/f16/l/l18.pdf).
 
@@ -86,9 +86,8 @@ There are many markets to be designed for this age and time. They are not only m
 
 P.S. I am aggregating a list of interesting market designs to solve real world problems. If you know of any please send me an email or a DM on twitter. This list will probably lead to more blog posts :)
 
+## References
 
-
-## References 
 Some pointers to work on decentralised RL with local economic transactions:
 
 [1] [Chang, Michael, et al. "Decentralized reinforcement learning: Global decision-making via local economic transactions." International Conference on Machine Learning. PMLR, 2020.
@@ -103,4 +102,3 @@ Some pointers to work on Prediction Markets:
 [2] [Hanson, Robin. "Shall we vote on values, but bet on beliefs?." Journal of Political Philosophy 21.2 (2013): 151-178.](https://mason.gmu.edu/~rhanson/futarchy2013.pdf)
 
 [3] [Roughgarden, Tim. Lecture #18: Prediction Markets. CS269I: Incentives in Computer Science, Stanford University, 30 Nov. 2016.](https://timroughgarden.org/f16/l/l18.pdf)
-
