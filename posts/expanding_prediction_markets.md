@@ -33,4 +33,4 @@ This idea comes from [Robin Hanson](https://www.overcomingbias.com/p/more-academ
 
 I believe this idea could also be slightly modified to enable new ways to do retroactive funding. For example, imagine the Ethereum Foundation wants to reward the project that most improves Ethereum decentralization by 2027. The winner is chosen by an AI oracle after conducting some "deep research". Any project that registers for funding automatically receives 10 shares, each worth 1 ETH if the project wins, 0 otherwise. These shares can be traded with speculators, before the market resolves, letting projects access funding whenever they need it the most.
 
-To bring these ideas into reality, I've created [wisdomofmarkets.com](https://wisdomofmarkets.com). Give it a try!
+To bring these ideas into reality, I've created [WisdomOfMarkets.com](https://wisdomofmarkets.com). Give it a try!
