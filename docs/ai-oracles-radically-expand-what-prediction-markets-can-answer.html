@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Oracles Radically Expand What Prediction Markets Can Answer</title>
+    <link rel="icon" href="static/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+        crossorigin="anonymous"></script>
+        <meta name="description" content="AI oracles let prediction markets answer more complex and subjective questions, making them far more powerful and useful.">
+        <meta name="author" content="João Abrantes">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AI Oracles Radically Expand What Prediction Markets Can Answer">
+        <meta name="twitter:description" content="AI oracles let prediction markets answer more complex and subjective questions, making them far more powerful and useful.">
+        <meta name="twitter:image" content="static/icon.jpg">
+        <meta name="twitter:site" content="@joaoabrantis">
+</head>
+<body>
+    <header>
+        <button onclick="location.href='index.html'">All Articles</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">🌙/☀️</button>
+    </header>
+    <main>
+        
+<article>
+    <div class="post-header">
+        <h1>AI Oracles Radically Expand What Prediction Markets Can Answer</h1>
+        
+    </div>
+    <p><em>Published on 2025-08-05</em></p>
+    <p>The type of questions answerable by traditional prediction markets is very limited as these markets can only allow bets on clearly defined outcomes. But most real-world events are ambiguous, subjective, or depend on variables that are impossible to define in advance — and thus are excluded from such markets. By using AI oracles to judge and resolve bets, we can vastly expand the scope and complexity of possible bets. This will enable bets on more interesting events such as the impact of policies, the outcomes of decisions, or the effectiveness of public goods.</p>
+<p>This matters because <strong>bets are important tools for revealing real beliefs, alignment, and commitment</strong>. They allow both humans and AI to aggregate knowledge, build trust, and collaborate. Removing limits on what can be bet on will expand the domains where collaboration is possible.</p>
+<p>Here’s a list of three types of bets enabled by AI oracles:</p>
+<h2>1. Markets for Complex Claims</h2>
+<p>Current limitation: Traditional prediction markets can only bet on events that have a clearly defined outcome (e.g. election results, sports scores). However, the large majority of events are not like this.</p>
+<p>Enabled by AI: An AI oracle can cheaply read hundreds of papers, news and data points to form a good, educated opinion about a complex event ("did policy X improve education quality?"). This unlocks markets around real-world policy, research quality, product effectiveness and the list goes on. Moreover, with an AI oracle everyone agrees on what they are betting on. We agree on the prompt, on the AI models, on the tools it has access to, and on the date the prompt will be evaluated.</p>
+<h2>2. The Hindsight Bet</h2>
+<p><strong>We’d make better decisions today if we could go to the future, collect information, and then return to the present.</strong> While time travel isn’t an option, we can bet on what a person in the future would have decided today with the benefit of hindsight.</p>
+<p>For example, “knowing what you know in 2027, would you have preferred to learn React or Vue in 2025?”. An AI oracle in 2027 can answer with the benefit of hindsight (i.e. knowing what happened in the years after). We can bet today on what that judgment will be.</p>
+<p>This enables a new kind of decision-support market. Unlike Futarchy, which requires multiple markets per decision (e.g. “Will policy X be implemented?” and “If X is implemented, will GDP rise?”), hindsight markets require just one: what the AI will conclude in the future. That’s far simpler - and far more likely to attract liquidity.</p>
+<h2>3. The Prestige Futures</h2>
+<p>This idea comes from <a href="https://www.overcomingbias.com/p/more-academic-prestige-futureshtml">Robin Hanson</a> and is mentioned in Vitalik’s Info Finance <a href="https://vitalik.eth.limo/general/2024/11/09/infofinance.html">post</a>. It’s about betting on what future historians will think about the impact of research papers, people, or projects. If you believe a certain paper will be seen as highly influential in the future, you can bet on it now. The market becomes a real-time display of prestige. AI oracles are a perfect fit to act as "future historians", as they can process vast amounts of data and make judgments in a transparent and auditable way. This is especially true for open-source AI models, where we know the data sources used for training.</p>
+<p>I believe this idea could also be slightly modified to enable new ways to do retroactive funding. For example, imagine the Ethereum Foundation wants to reward the project that most improves Ethereum decentralization by 2027. The winner is chosen by an AI oracle after conducting some "deep research". Any project that registers for funding automatically receives 10 shares, each worth 1 ETH if the project wins, 0 otherwise. These shares can be traded with speculators, before the market resolves, letting projects access funding whenever they need it the most.</p>
+<p>To bring these ideas into reality, I've created <a href="https://wisdomofmarkets.com">wisdomofmarkets.com</a>. Give it a try!</p>
+</article>
+
+    </main>
+    <footer>Tech Entrepreneur and Researcher into AI and Markets<br><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a></footer>
+    <script>
+        (() => {
+          const root  = document.documentElement;
+          const btn   = document.getElementById('theme-toggle');
+          const store = localStorage;
+          const DARK  = 'dark';
+          const LIGHT = 'light';
+        
+          /* 1 ▸ restore saved choice, if any */
+          const saved = store.getItem('theme');
+          if (saved === DARK || saved === LIGHT) {
+              root.setAttribute('data-theme', saved);
+          }
+        
+          /* helper: is the page currently dark? */
+          const isDark = () => {
+              const attr = root.getAttribute('data-theme');
+              return attr ? attr === DARK
+                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          };
+        
+          /* 2 ▸ flip on click */
+          btn?.addEventListener('click', () => {
+              const next = isDark() ? LIGHT : DARK;
+              root.setAttribute('data-theme', next);
+              store.setItem('theme', next);
+          });
+        })();
+        </script>
+</body>
+</html>

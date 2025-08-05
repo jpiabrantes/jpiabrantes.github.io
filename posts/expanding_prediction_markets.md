@@ -7,9 +7,9 @@ description: >-
 date: 2025-08-05
 ---
 
-The type of questions answerable by traditional prediction markets is very limited; they only allow bets on clearly defined outcomes. Most real-world events aren’t like this. AI oracles, used to resolve the bets, will change this by greatly expanding the scope and complexity of possible bets, allowing us to gather information on more interesting events such as the impact of policies, decisions, and public goods.
+The type of questions answerable by traditional prediction markets is very limited as these markets can only allow bets on clearly defined outcomes. But most real-world events are ambiguous, subjective, or depend on variables that are impossible to define in advance — and thus are excluded from such markets. By using AI oracles to judge and resolve bets, we can vastly expand the scope and complexity of possible bets. This will enable bets on more interesting events such as the impact of policies, the outcomes of decisions, or the effectiveness of public goods.
 
-This is important because a **bet is an important tool to reveal real beliefs, alignment, and commitment**. It allows both humans and AI to aggregate knowledge, build trust, and collaborate. Removing limits to what can be subject to a bet will increase the scope of things we can collaborate on.
+This matters because **bets are important tools for revealing real beliefs, alignment, and commitment**. They allow both humans and AI to aggregate knowledge, build trust, and collaborate. Removing limits on what can be bet on will expand the domains where collaboration is possible.
 
 Here’s a list of three types of bets enabled by AI oracles:
 
