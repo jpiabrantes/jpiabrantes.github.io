@@ -76,7 +76,7 @@ latexcenter:first-child{
 </ul>
 </div>
 
-<h2>A Promising Path for AGI based on Convergent Evolution</h2>
+<h2 id="a-promising-path-for-agi-based-on-convergent-evolution">A Promising Path for AGI based on Convergent Evolution</h2>
 <p>Here, we introduce a promising methodology for progress in AI, inspired by convergent evolution (CE). CE occurs when different species independently evolve similar solutions to solve similar problems. For example, the <strong>independent</strong> evolution of eyes has occurred at least fifty times across different species — as if when living in an environment with light, it becomes inevitable to see it.</p>
 <p style="text-align:center; line-height:1.1em;">
 <img src="static/img/mimicking_evolution/octopus_eye.png" alt="drawing" style="width:85%;margin:auto;display:block;"/>
@@ -97,7 +97,7 @@ latexcenter:first-child{
 <p>The idea of using first principles to build generative models, collect data from simulations and compare it to data from the real world, was first advanced by Axelrod in 1997<sup>[2]</sup> and baptized as <em>the third way of doing science</em>.</p>
 <p><strong>Important distinction between agents and replicators</strong></p>
 <p>The distinction between an agent and a replicator is key to understanding this post. The replicator is the <a href="https://en.wikipedia.org/wiki/Gene-centered_view_of_evolution#The_gene_as_the_unit_of_selection">unit of evolution</a>, and an agent carries one or more replicators. In biology, evolutionary pressure occurs at the gene level, not at the level of the individual. In this case, the replicator is the gene, and the agent is the animal, plant, bacteria, and so on. Richard Dawkins, in his book <em>The Selfish Gene</em><sup>[3]</sup>, has famously described our bodies as throwaway survival machines built for replicating immortal genes. To evolve biological-like behaviours is crucial that we evolve replicators and not individuals — anything else will yield unnatural behaviours.</p>
-<h2>The Success of Arms Race as a Tool for AI Research</h2>
+<h2 id="the-success-of-arms-race-as-a-tool-for-ai-research">The Success of Arms Race as a Tool for AI Research</h2>
 <p><em>(if you are already familiar with the concept of arms race in the context of AI research you can skip this section)</em></p>
 <p>Recently, impressive results in Artificial Intelligence have been achieved by having neural networks competing against each other in simulated games (OpenFive<sup>[4]</sup>, AlphaZero<sup>[5]</sup>, Generative Adversarial Network (GAN)<sup>[6]</sup>). In fact, an arms race is created every time we have adaptable entities competing. The arms race is responsible for the continued emergence of ever new innovative and sophisticated capabilities necessary to outcompete adversaries. For example, a GAN trains two neural networks by making them compete against each other. One network, the discriminator, tries to distinguish real data from fake data produced by the other network, the generator. The generator’s goal is to fool the discriminator into thinking the fake data it generates is real. The discriminator is trained by seeing multiple labelled examples of the real and the fake data, whilst the generator is trained by seeing the impact its output has in the discriminator’s decision. This competition of adaptable systems creates an arms race. For instance, when a GAN is being trained to generate images of cats, every time the discriminator learns a new feature that is able to distinguish real cats from fake cats, like learning that real cats have whiskers, the generator learns that to convincingly fool the discriminator it has to generate images of fake cats with the discovered feature (e.g. whiskers). Similarly, arms race occur in the algorithms that trained superhuman AI agents to play Chess, Go and Dota.</p>
 <p style="text-align:center; line-height:1.1em;">
@@ -107,7 +107,7 @@ latexcenter:first-child{
 
 <p>Biological evolution is also a constant arms race. When a predator learns how to see better, the prey learns how to hide better — by developing camouflage, for example. Many of the techniques developed for training agents in competitive environments can be used to train bio-inspired agents in bio-inspired environments. In this line of research, OpenAI has recently developed Neural MMO<sup>[7]</sup>, a simulated environment that captures important properties of Life on Earth. In Neural MMO artificial agents, represented by neural networks, need to forage for food and water to survive in a never-ending simulation. Currently, they presented results for agents who use RL to maximise their survival, instead of maximising the survival and reproduction success of a <strong>replicator</strong> as it happens in nature.</p>
 <p>We build on top of this work and add three important contributions: we introduce replicators (genes), give our agents the ability to reproduce, and design an RL algorithm that increases agents capability to maximise their genes survival and replication success.</p>
-<h2>Reinforcement Learning to Maximise Evolutionary Fitness</h2>
+<h2 id="reinforcement-learning-to-maximise-evolutionary-fitness">Reinforcement Learning to Maximise Evolutionary Fitness</h2>
 <p>Evolutionary pressure acts on the replicator level, but reinforcement learning acts on the agent level.  RL can be aligned with the evolutionary process by noting what evolution does to the agents through its selection of replicators: evolution generates agents with increasing capabilities to maximise the survival and reproduction success of the replicators they carry. So that's what our RL algorithm should do as well.</p>
 <p>From the replicator’s perspective, the evolutionary process is a constant competition for resources. However, from the agent’s perspective, the evolutionary process is a mix between a cooperative exercise with agents that carry some of its replicators (its family) and a competition with unrelated agents. Evolution pressures agents to engage in various degrees of collaboration depending on the degree of kinship between them and the agents they interact with (depending on the amount of overlap between the replicators they carry). This pressure for cooperation amongst relatives was named kin selection, and was informally summarised by J.B.S. Haldane that has jokingly said "I would gladly lay down my life for two brothers or eight first cousins" (alluding to the fact that in humans, and other diploid species, siblings have on average half of the genes identical by descent, whilst first cousins have on average one eighth, therefore, from the genes perspective sacrificing an individual to save two siblings or eight first cousins is a fair deal, evolutionary speaking).</p>
 <p>These incentives can be described in a simple reward function. To make the language easier, let’s call our unit of replication a gene as it happens in biology. At each point in time, if we take all the genes from every agent and put them in a pool, we get the gene pool. With these two definitions in mind, our proposed reward function can be simply stated: each agent wants to maximise the number of times its genes appear in the gene pool.</p>
@@ -120,7 +120,7 @@ latexcenter:first-child{
 <span style="font-size:0.7em;">Diagram 1. There are two different mechanisms driving the development of the brain: evolution (across generations) and learning (across one’s lifetime).</span>
 </p>
 
-<h2>The Bacteria Colony</h2>
+<h2 id="the-bacteria-colony">The Bacteria Colony</h2>
 <p style="text-align:center; line-height:1.1em;">
 <img src="static/img/mimicking_evolution/env.png" alt="env" style="width:100%;margin:auto;display:block;"/>
 <span style="font-size:0.7em;">Figure 4. The Bacteria Colony.</span>
@@ -135,9 +135,9 @@ latexcenter:first-child{
 
 <p><strong>The policy</strong></p>
 <p>Each agent observes a 5x5 square crop of the surrounding state (figure 4). The agent sees six features for every visible tile; i.e. the input is a 5x5x6 tensor. This includes two features corresponding to tile properties (food available and whether it is occupied or not) and four features corresponding to the occupying agents’ properties (age, food stored, kinship and health). Besides these local inputs, each agent also observes its absolute position, family size and the total number of agents in the world. We intend to remove these extra inputs in future work as we provide agents with memory. The neural network has ten outputs (five movement actions with no attack and five movement actions with an attack), and a its architecture is simply composed by three fully connected layers with 512, 256 and 128 units correspondingly.</p>
-<h2>Results: The Colony’s History</h2>
+<h2 id="results-the-colonys-history">Results: The Colony’s History</h2>
 <p>In this section, we unfold the evolutionary History of the Bacteria Colony and narrate its key events. Then, we delve into the details of the evolved behaviours.</p>
-<h3>The Colony’s History</h3>
+<h3 id="the-colonys-history">The Colony’s History</h3>
 <p><em>In the very beginning, God created Adam, Boltzmann, Claude, Darwin and Eve. These first bacteria were meant to populate the world, but they could hardly find the necessary resources to survive, let alone reproduce. Despite that, they evolved. You see, in this world, evolution works differently. God is watching every move of every being and reinforcing (or inhibiting) beneficial (or detrimental) behaviours for survival and self-replication.</em></p>
 <p><em>Soon the bacteria got better at resource gathering and survival, stretching their life span up to 38 iterations (figure 6.c, era I - small blue line)! With improved techniques for gathering, each bacterium was able to collect more and more food. Until one day, a miracle happened...</em></p>
 <p><em>Eve was so fed up with food that it split into two! Our empty, lonely world progressively started to fill up. The birth rate was skyrocking, the population was booming (figures 6.a and .b, era II - orange line)! Nonetheless, our bacteria started to live a more dangerous and shorter life (figure 6.c and .d, era II). You see, they had been evolving in a lonely world and didn’t yet know how to interact with other members of their family.</em></p>
@@ -151,7 +151,7 @@ latexcenter:first-child{
 <span style="font-size:0.7em;">Figure 6. Macro-statistics obtained in a test environment using the policies trained for a certain number of training episodes. Every 200 training episodes, we run 20 test episodes with a length of 500. The training episodes had a length between 450 and 550. The different colours correspond to the different eras; I: learning to survive (barely visible), II: learning to reproduce, III: learning to detect kin, IV: learning to self-sacrifice.</span>
 </p>
 
-<h3>Cannibalism and suicide as a tool for gene survival</h3>
+<h3 id="cannibalism-and-suicide-as-a-tool-for-gene-survival">Cannibalism and suicide as a tool for gene survival</h3>
 <p>In era IV, we saw the rise of cannibalism practiced by young bacteria on older bacteria. Figure 7.a) shows how the average age of cannibals and their victims grows apart in this era. This allowed for an increase in population, but how did it affect the survival and reproduction success of a given family?</p>
 <p>To answer this question, we measured the family size of a certain family when its members were not allowed to attack each other and compared it with the normal situation where intra-family attacks were allowed (see figure 7.b).</p>
 <p style="text-align:center; line-height:1.1em;">
@@ -161,18 +161,18 @@ latexcenter:first-child{
 </p>
 
 <p>Figure 7 clearly shows that cannibalism is essential for long-term gene survival. We also ran this exact experiment before era IV and achieved the opposite results. This shows that before era IV the bacteria didn’t yet know how to use cannibalism to their gene’s advantage (results not shown).</p>
-<h2>Final words</h2>
+<h2 id="final-words">Final words</h2>
 <p><img src="static/img/mimicking_evolution/final_anim.gif" alt="final animation" style="width:50%;margin:auto;display:block;"/></p>
 <p>We’ve successfully used an RL algorithm that trains agents to maximise the survival and reproduction success of their genes!</p>
 <p>In our paper, we compare our algorithm with a popular evolutionary algorithm. We also evolve agents on a sexual environment, where agents reproduce sexually causing a fundamental change in the way agents cooperate with each other.</p>
 <p>We intend to build on top of this work. Following our proposed methodology for progress in AI, we will research the minimum set of requirements to emerge natural cognitive abilities in artificial agents such as identity awareness and recognition, friendship and hierarchical status.</p>
 <p>Would love to hear your feedback on this work, send me an <a href="mailto:jpiabrantes@gmail.com">email</a> or message me on <a href="https://www.twitter.com/joaoabrantis">twitter</a> :)</p>
-<h2>Acknowledgements</h2>
+<h2 id="acknowledgements">Acknowledgements</h2>
 <p>The <a href="https://arxiv.org/abs/2004.00048">paper</a> behind this blogpost was written with my co-authors Arnaldo Abrantes and Frans Oliehoek.</p>
 <p>I would like to thank <a href="https://twitter.com/awjuliani">Arthur Juliani</a>, <a href="https://twitter.com/NathanBenaich">Nathan Benaich</a>, <a href="https://twitter.com/jsuarez5341">Joseph Suarez</a> and <a href="https://twitter.com/jfnoren">Fredrik Norén</a> for reading and improving an early version of this post.</p>
 <p>A special thanks to my father, Arnaldo Abrantes, for the stimulating conversations throughout my life making me passionate about complex systems, intelligence and science in general.</p>
 <p>All errors, omissions and imprecisions remain my own.</p>
-<h2>References</h2>
+<h2 id="references">References</h2>
 <p>[1] Christakis, Nicholas. "BLUEPRINT The Evolutionary Origins of a Good Society." (2019)</p>
 <p>[2] Axelrod, Robert. "Advancing the art of simulation in the social sciences." Simulating social phenomena. Springer, Berlin, Heidelberg, 1997. 21-40.</p>
 <p>[3] Dawkins, Richard. The selfish gene, 1976.</p>

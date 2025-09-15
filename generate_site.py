@@ -16,7 +16,7 @@ env = Environment(
     loader=FileSystemLoader(TEMPLATES),
     autoescape=select_autoescape()
 )
-md = markdown.Markdown(extensions=["fenced_code", "codehilite", "tables", "mdx_math"],
+md = markdown.Markdown(extensions=["fenced_code", "codehilite", "tables", "mdx_math", "toc"],
                        extension_configs={
         "mdx_math": {
             "enable_dollar_delimiter": True,
