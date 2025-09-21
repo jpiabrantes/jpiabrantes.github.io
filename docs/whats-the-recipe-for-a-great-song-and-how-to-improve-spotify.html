@@ -1,34 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>What&#39;s the recipe for a great song and how to improve Spotify?</title>
-    <link rel="icon" href="static/icon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
-        crossorigin="anonymous"></script>
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
-        crossorigin="anonymous"></script>
-        <meta name="description" content="What&#39;s the recipe for a great song. What emotions does music create. How is that related with learning, being human and AI.">
-        <meta name="author" content="João Abrantes">
+    <link rel="icon" href="static/icon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="What&#39;s the recipe for a great song. What emotions does music create. How is that related with learning, being human and AI."
+    />
+    <meta name="author" content="João Abrantes" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="What&#39;s the recipe for a great song and how to improve Spotify?">
-        <meta name="twitter:description" content="What&#39;s the recipe for a great song. What emotions does music create. How is that related with learning, being human and AI.">
-        <meta name="twitter:image" content="static/icon.jpg">
-        <meta name="twitter:site" content="@joaoabrantis">
-</head>
-<body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What&#39;s the recipe for a great song and how to improve Spotify?" />
+    <meta
+      name="twitter:description"
+      content="What&#39;s the recipe for a great song. What emotions does music create. How is that related with learning, being human and AI."
+    />
+    <meta
+      name="twitter:image"
+      content="static/icon.jpg"
+    />
+    <meta name="twitter:site" content="@joaoabrantis" />
+  </head>
+  <body>
     <header>
-        <button onclick="location.href='index.html'">All Articles</button>
-        <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">🌙/☀️</button>
+      <button onclick="location.href='index.html'">All Articles</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">
+        🌙/☀️
+      </button>
     </header>
     <main>
-        
 <article>
     <div class="post-header">
         <h1>What&#39;s the recipe for a great song and how to improve Spotify?</h1>
@@ -55,37 +74,40 @@
 <p>To make AI produce the next hit we should train it to generate music chronologically. Each month we look at the music at the top of the billboard charts and try to measure its predictability. How many snippets were hard to predict? How many were easy? We try to figure out what’s the optimal amount of unpredictability to have in a song. We then make our AI output songs with those parameters.</p>
 <p>If you liked this post follow me on <a href="https://twitter.com/joaoabrantis">twitter</a> and check my other AI post <a href="mimicking-evolution-with-reinforcement-learning/">Mimicking Evolution with Reinforcement Learning</a>.</p>
 </article>
-
-    </main>
-    <footer>Tech Entrepreneur and Researcher into AI and Markets<br><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a></footer>
+</main>
+    <footer>
+      Tech Entrepreneur and Researcher into Complex Systems and Multi-Agent
+      RL<br /><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a>
+    </footer>
     <script>
-        (() => {
-          const root  = document.documentElement;
-          const btn   = document.getElementById('theme-toggle');
-          const store = localStorage;
-          const DARK  = 'dark';
-          const LIGHT = 'light';
-        
-          /* 1 ▸ restore saved choice, if any */
-          const saved = store.getItem('theme');
-          if (saved === DARK || saved === LIGHT) {
-              root.setAttribute('data-theme', saved);
-          }
-        
-          /* helper: is the page currently dark? */
-          const isDark = () => {
-              const attr = root.getAttribute('data-theme');
-              return attr ? attr === DARK
-                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
-          };
-        
-          /* 2 ▸ flip on click */
-          btn?.addEventListener('click', () => {
-              const next = isDark() ? LIGHT : DARK;
-              root.setAttribute('data-theme', next);
-              store.setItem('theme', next);
-          });
-        })();
-        </script>
-</body>
+      (() => {
+        const root = document.documentElement;
+        const btn = document.getElementById("theme-toggle");
+        const store = localStorage;
+        const DARK = "dark";
+        const LIGHT = "light";
+
+        /* 1 ▸ restore saved choice, if any */
+        const saved = store.getItem("theme");
+        if (saved === DARK || saved === LIGHT) {
+          root.setAttribute("data-theme", saved);
+        }
+
+        /* helper: is the page currently dark? */
+        const isDark = () => {
+          const attr = root.getAttribute("data-theme");
+          return attr
+            ? attr === DARK
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        };
+
+        /* 2 ▸ flip on click */
+        btn?.addEventListener("click", () => {
+          const next = isDark() ? LIGHT : DARK;
+          root.setAttribute("data-theme", next);
+          store.setItem("theme", next);
+        });
+      })();
+    </script>
+  </body>
 </html>

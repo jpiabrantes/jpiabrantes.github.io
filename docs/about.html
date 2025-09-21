@@ -1,40 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>About me</title>
-    <link rel="icon" href="static/icon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
-        crossorigin="anonymous"></script>
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
-        crossorigin="anonymous"></script>
-        <meta name="description" content="abranti&#39;s personal blog">
-        <meta name="author" content="João Abrantes">
+    <link rel="icon" href="static/icon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="abranti&#39;s personal blog"
+    />
+    <meta name="author" content="João Abrantes" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="About me">
-        <meta name="twitter:description" content="abranti&#39;s personal blog">
-        <meta name="twitter:image" content="static/icon.jpg">
-        <meta name="twitter:site" content="@joaoabrantis">
-</head>
-<body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About me" />
+    <meta
+      name="twitter:description"
+      content="abranti&#39;s personal blog"
+    />
+    <meta
+      name="twitter:image"
+      content="static/icon.jpg"
+    />
+    <meta name="twitter:site" content="@joaoabrantis" />
+  </head>
+  <body>
     <header>
-        <button onclick="location.href='index.html'">All Articles</button>
-        <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">🌙/☀️</button>
+      <button onclick="location.href='index.html'">All Articles</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">
+        🌙/☀️
+      </button>
     </header>
     <main>
-        
 <h1>About me</h1>
-<style>ul{line-height: 1em;   margin-block-start:0.2em !important;   margin-block-end:0 !important;   list-style-type:disc;}ol{   margin-block-start:0.2em !important;}p { margin-block-end: 0em !important;}</style>
+<style>ul{line-height: 1.4em;   margin-block-start:0.2em !important;   margin-block-end:0 !important;   list-style-type:disc;}ol{   margin-block-start:0.2em !important;}p { margin-block-end: 0em !important;}</style>
 
-<p>Hey there! </p>
+<p>Hey there!</p>
 <p>I'm João Abrantes (or abranti!), welcome to my personal page.</p>
-<p>I alternate between research and building products.</p>
+<p>Historically I've alternated between research and building products. But, currently I am focused on reproducing the origins of society with multi-agent RL, which is the continuation of a research direction I started in <a href="https://abranti.com/mimicking-evolution-with-reinforcement-learning.html">2019</a>.</p>
 <p><strong>Products</strong></p>
 <ul>
 <li><a href="https://alpacalaw.com">Alpaca Law</a> is a conversational AI specialised in Portugal laws and case laws.</li>
@@ -47,8 +66,8 @@
 <p><strong>Research</strong></p>
 <ul>
 <li>I am interested in complex adaptable systems like evolution, economics and sociology.</li>
-<li>Especially proud of this paper: <a href="https://arxiv.org/abs/2004.00048">Mimicking Evolution with Reinforcement Learning</a>.</li>
-<li>Was a Research Resident in <a href="https://sakana.ai">Sakana AI</a> in 2024/2025.</li>
+<li><a href="https://arxiv.org/abs/2004.00048">Mimicking Evolution with Reinforcement Learning</a> is my best work. It introduces continuous degrees of cooperation for multi-agent reinforcement learning - a setting that I believe will be crucial for the emergence of complex social intelligence. <a href="https://abranti.com/mimicking-evolution-with-reinforcement-learning.html">blogpost</a>.</li>
+<li>Was a Research Resident in <a href="https://sakana.ai">Sakana AI</a> in 2024/2025, where I published <a href="https://arxiv.org/abs/2508.16204">Competition and Attraction Improve Model Fusion</a> which was nominated for Gecco's best paper award.</li>
 </ul>
 <p><strong>Education</strong></p>
 <ul>
@@ -71,37 +90,40 @@
 </tr>
 </tbody>
 </table>
-
-    </main>
-    <footer>Tech Entrepreneur and Researcher into AI and Markets<br><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a></footer>
+</main>
+    <footer>
+      Tech Entrepreneur and Researcher into Complex Systems and Multi-Agent
+      RL<br /><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a>
+    </footer>
     <script>
-        (() => {
-          const root  = document.documentElement;
-          const btn   = document.getElementById('theme-toggle');
-          const store = localStorage;
-          const DARK  = 'dark';
-          const LIGHT = 'light';
-        
-          /* 1 ▸ restore saved choice, if any */
-          const saved = store.getItem('theme');
-          if (saved === DARK || saved === LIGHT) {
-              root.setAttribute('data-theme', saved);
-          }
-        
-          /* helper: is the page currently dark? */
-          const isDark = () => {
-              const attr = root.getAttribute('data-theme');
-              return attr ? attr === DARK
-                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
-          };
-        
-          /* 2 ▸ flip on click */
-          btn?.addEventListener('click', () => {
-              const next = isDark() ? LIGHT : DARK;
-              root.setAttribute('data-theme', next);
-              store.setItem('theme', next);
-          });
-        })();
-        </script>
-</body>
+      (() => {
+        const root = document.documentElement;
+        const btn = document.getElementById("theme-toggle");
+        const store = localStorage;
+        const DARK = "dark";
+        const LIGHT = "light";
+
+        /* 1 ▸ restore saved choice, if any */
+        const saved = store.getItem("theme");
+        if (saved === DARK || saved === LIGHT) {
+          root.setAttribute("data-theme", saved);
+        }
+
+        /* helper: is the page currently dark? */
+        const isDark = () => {
+          const attr = root.getAttribute("data-theme");
+          return attr
+            ? attr === DARK
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        };
+
+        /* 2 ▸ flip on click */
+        btn?.addEventListener("click", () => {
+          const next = isDark() ? LIGHT : DARK;
+          root.setAttribute("data-theme", next);
+          store.setItem("theme", next);
+        });
+      })();
+    </script>
+  </body>
 </html>

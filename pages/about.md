@@ -3,14 +3,13 @@ title: "About me"
 template: "page"
 ---
 
-<style>ul{line-height: 1em;   margin-block-start:0.2em !important;   margin-block-end:0 !important;   list-style-type:disc;}ol{   margin-block-start:0.2em !important;}p { margin-block-end: 0em !important;}</style>
+<style>ul{line-height: 1.4em;   margin-block-start:0.2em !important;   margin-block-end:0 !important;   list-style-type:disc;}ol{   margin-block-start:0.2em !important;}p { margin-block-end: 0em !important;}</style>
 
-
-Hey there! 
+Hey there!
 
 I'm João Abrantes (or abranti!), welcome to my personal page.
 
-I alternate between research and building products.
+Historically I've alternated between research and building products. But, currently I am focused on reproducing the origins of society with multi-agent RL, which is the continuation of a research direction I started in [2019](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
 
 **Products**
 
@@ -24,8 +23,8 @@ I alternate between research and building products.
 **Research**
 
 - I am interested in complex adaptable systems like evolution, economics and sociology.
-- Especially proud of this paper: [Mimicking Evolution with Reinforcement Learning](https://arxiv.org/abs/2004.00048).
-- Was a Research Resident in [Sakana AI](https://sakana.ai) in 2024/2025.
+- [Mimicking Evolution with Reinforcement Learning](https://arxiv.org/abs/2004.00048) is my best work. It introduces continuous degrees of cooperation for multi-agent reinforcement learning - a setting that I believe will be crucial for the emergence of complex social intelligence. [blogpost](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
+- Was a Research Resident in [Sakana AI](https://sakana.ai) in 2024/2025, where I published [Competition and Attraction Improve Model Fusion](https://arxiv.org/abs/2508.16204) which was nominated for Gecco's best paper award.
 
 **Education**
 
@@ -33,9 +32,8 @@ I alternate between research and building products.
 - MSc in Biomedical engineering @IST
 - BSc in Physics @IST
 
-
 I am into personal growth, meaningful relationships, health and sports. Very proud of having represented Portugal at pole-vaulting in the European Youth Olympics, Belgrade 2007 :) !
 
-| ![epfl](static/img/about/epfl.jpg) |  ![greenhouse](static/img/about/greenhouse.jpg) |
-|:---:|:---:|
-| Life at EPFL | Life in a 🍅 Greenhouse (at Optimal Labs) |
+| ![epfl](static/img/about/epfl.jpg) | ![greenhouse](static/img/about/greenhouse.jpg) |
+| :--------------------------------: | :--------------------------------------------: |
+|            Life at EPFL            |   Life in a 🍅 Greenhouse (at Optimal Labs)    |

@@ -1,35 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>abranti&#39;s website</title>
-    <link rel="icon" href="static/icon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
-        crossorigin="anonymous"></script>
-    <script defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
-        crossorigin="anonymous"></script>
-        <meta name="description" content="abranti&#39;s personal blog">
-        <meta name="author" content="João Abrantes">
+    <link rel="icon" href="static/icon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="abranti&#39;s personal blog"
+    />
+    <meta name="author" content="João Abrantes" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="abranti&#39;s website">
-        <meta name="twitter:description" content="abranti&#39;s personal blog">
-        <meta name="twitter:image" content="static/icon.jpg">
-        <meta name="twitter:site" content="@joaoabrantis">
-</head>
-<body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="abranti&#39;s website" />
+    <meta
+      name="twitter:description"
+      content="abranti&#39;s personal blog"
+    />
+    <meta
+      name="twitter:image"
+      content="static/icon.jpg"
+    />
+    <meta name="twitter:site" content="@joaoabrantis" />
+  </head>
+  <body>
     <header>
-        <button onclick="location.href='index.html'">All Articles</button>
-        <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">🌙/☀️</button>
+      <button onclick="location.href='index.html'">All Articles</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">
+        🌙/☀️
+      </button>
     </header>
-    <main>
-        
-            <div class="top-links">
+    <main> <div class="top-links">
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
@@ -42,38 +60,40 @@
   <li class="post-item">    <div class="post-meta">DECEMBER 2021</div>    <h2 class="post-title"><a href="what-evolution-tells-us-about-how-to-brainstorming.html">What evolution tells us about how to brainstorming?</a></h2>  </li>
   <li class="post-item">    <div class="post-meta">JANUARY 2020</div>    <h2 class="post-title"><a href="can-ai-optimise-governments.html">Can AI optimise governments?</a></h2>  </li>
   <li class="post-item">    <div class="post-meta">SEPTEMBER 2019</div>    <h2 class="post-title"><a href="mimicking-evolution-with-reinforcement-learning.html">Mimicking Evolution with Reinforcement Learning</a></h2>  </li>
-</ul>
-        
-    </main>
-    <footer>Tech Entrepreneur and Researcher into AI and Markets<br><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a></footer>
+</ul> </main>
+    <footer>
+      Tech Entrepreneur and Researcher into Complex Systems and Multi-Agent
+      RL<br /><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a>
+    </footer>
     <script>
-        (() => {
-          const root  = document.documentElement;
-          const btn   = document.getElementById('theme-toggle');
-          const store = localStorage;
-          const DARK  = 'dark';
-          const LIGHT = 'light';
-        
-          /* 1 ▸ restore saved choice, if any */
-          const saved = store.getItem('theme');
-          if (saved === DARK || saved === LIGHT) {
-              root.setAttribute('data-theme', saved);
-          }
-        
-          /* helper: is the page currently dark? */
-          const isDark = () => {
-              const attr = root.getAttribute('data-theme');
-              return attr ? attr === DARK
-                          : window.matchMedia('(prefers-color-scheme: dark)').matches;
-          };
-        
-          /* 2 ▸ flip on click */
-          btn?.addEventListener('click', () => {
-              const next = isDark() ? LIGHT : DARK;
-              root.setAttribute('data-theme', next);
-              store.setItem('theme', next);
-          });
-        })();
-        </script>
-</body>
+      (() => {
+        const root = document.documentElement;
+        const btn = document.getElementById("theme-toggle");
+        const store = localStorage;
+        const DARK = "dark";
+        const LIGHT = "light";
+
+        /* 1 ▸ restore saved choice, if any */
+        const saved = store.getItem("theme");
+        if (saved === DARK || saved === LIGHT) {
+          root.setAttribute("data-theme", saved);
+        }
+
+        /* helper: is the page currently dark? */
+        const isDark = () => {
+          const attr = root.getAttribute("data-theme");
+          return attr
+            ? attr === DARK
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        };
+
+        /* 2 ▸ flip on click */
+        btn?.addEventListener("click", () => {
+          const next = isDark() ? LIGHT : DARK;
+          root.setAttribute("data-theme", next);
+          store.setItem("theme", next);
+        });
+      })();
+    </script>
+  </body>
 </html>
