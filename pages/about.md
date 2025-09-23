@@ -9,7 +9,7 @@ Hey there!
 
 I'm João Abrantes (or abranti!), welcome to my personal page.
 
-Historically I've alternated between research and building products. But, currently I am focused on reproducing the origins of society with multi-agent RL, which is the continuation of a research direction I started in [2019](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
+Historically I've alternated between research and building products. But, currently I am focused on creating social intelligence with multi-agent RL, which is the continuation of a research direction I started in [2019](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
 
 **Products**
 
