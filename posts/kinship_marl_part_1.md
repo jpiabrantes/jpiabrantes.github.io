@@ -14,16 +14,6 @@ tags:
 ---
 
 <style>
-ul{
-   margin-left: 1rem;
-   line-height: 1.2em;
-   margin-block-start:0.2em !important;
-   margin-block-end:0 !important;
-   list-style-type:disc;
-}
-ol{
-   margin-block-start:0.2em !important;
-}
 p {
  margin-block-end: 0em !important;
 }
@@ -32,6 +22,8 @@ latexcenter:first-child{
   line-height: 1.5;
 }
 </style>
+
+<img src="static/img/kinship_marl_part_1/territories_summer_winter.png" alt="territories screenshot" style="width:100%;margin:auto;display:block;"/>
 
 Humanity’s superpower is our ability to cooperate with strangers at massive scale. To build human-like AI, we may need to let it evolve a society first. That is what I am trying to do in this blog series.
 
