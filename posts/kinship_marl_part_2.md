@@ -14,16 +14,7 @@ tags:
 ---
 
 <style>
-ul{
-   margin-left: 1rem;
-   line-height: 1.2em;
-   margin-block-start:0.2em !important;
-   margin-block-end:0 !important;
-   list-style-type:disc;
-}
-ol{
-   margin-block-start:0.2em !important;
-}
+
 p {
  margin-block-end: 0em !important;
 }
@@ -106,11 +97,11 @@ $$
 
 $$
 \begin{align*}
-c_N^i = c_0^i \prod_{t=1}^N \frac{c_t^i}{c_{t-1}^i}, \\[6pt]
+c_N^i &= c_0^i \prod_{t=1}^N \frac{c_t^i}{c_{t-1}^i}, \\[6pt]
 \max_{\pi}~\mathbb{E}\!\big[\log(c_N^i)\big]
-= \max_{\pi}~\mathbb{E}\!\Big[\sum_{t=1}^N \log\!\left(\frac{c_t^i}{c_{t-1}^i}\right)\Big]
+&= \max_{\pi}~\mathbb{E}\!\Big[\sum_{t=1}^N \log\!\left(\frac{c_t^i}{c_{t-1}^i}\right)\Big]
 = \max_{\pi}~\mathbb{E}\!\Big[\sum_{t=1}^N r_t^i\Big], \\[6pt]
-\text{where}\quad r_t^i = \log\!\left(\frac{c_t^i}{c_{t-1}^i}\right).
+\text{where}\quad r_t^i &= \log\!\left(\frac{c_t^i}{c_{t-1}^i}\right).
 \end{align*}
 $$
 
@@ -118,8 +109,8 @@ Both formulations provide dense learning signals and work even when $N$ goes to 
 
 The logarithm creates loss aversion — it penalizes losses more than it rewards equivalent gains. With 4 gene copies in the gene pool:
 
-- Losing 1 copy (4 → 3): log(3/4) ≈ -0.288
-- Gaining 1 copy (4 → 5): log(5/4) ≈ +0.223
+- Losing 1 copy (4 → 3): $\log(\frac{3}{4}) \approx -0.288$
+- Gaining 1 copy (4 → 5): $\log(\frac{5}{4}) \approx +0.223$
 
 A 50-50 gamble between these outcomes yields negative expected reward (-0.032), even though the expected gene change is neutral. This asymmetry scales: a 25% loss always hurts more than a 25% gain helps.
 
@@ -243,7 +234,7 @@ The figure below shows four training runs comparing:
 - **Reward functions:** Naive growth delta (blue) vs. Kelly-inspired logarithmic reward (green)
 - **Value aggregation:** E-VDN (solid lines) vs. GCVA (dashed lines)
 
-<img src="static/img/kinship_marl_part_2/results.jpeg" alt="results" style="width:85%;margin:auto;display:block;"/>
+<img src="static/img/kinship_marl_part_2/results.jpeg" alt="results" style="width:100%;margin:auto;display:block;"/>
 
 **Results:** When maximizing the naive reward (blue lines), agents reproduce too aggressively — birth rates and peak populations spike early in training. Their large families quickly deplete food stores, leading to extinction before the second harvest season arrives. As a result, episode length struggles to exceed 200 steps.
 

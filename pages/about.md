@@ -9,7 +9,7 @@ Hey there!
 
 I'm João Abrantes (or abranti!), welcome to my personal page.
 
-Historically I've alternated between research and building products. But, currently I am focused on creating social intelligence with [kinship-aligned multi-agent RL](https://x.com/joaoabrantis/status/1977771778618597438), which is the continuation of a research direction I started in [2019](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
+Historically I've alternated between research and building products. But, currently I am focused on creating social intelligence with [kinship-aligned multi-agent RL](https://abranti.com/the-key-properties-to-reproduce-society-with-marl.html), which is the continuation of a research direction I started in [2019](https://abranti.com/mimicking-evolution-with-reinforcement-learning.html).
 
 **Products**
 
