@@ -1,7 +1,6 @@
 ---
 template: post
 title: Mimicking Evolution with Reinforcement Learning
-slug: mimicking-evolution-with-reinforcement-learning
 draft: false
 date: 2019-09-01T00:00:00.284Z
 description: >-
@@ -18,6 +17,7 @@ tags:
   - Evolution
   - MARL
 ---
+
 <style>
 ul{
    margin-left: 1rem;
@@ -108,7 +108,7 @@ We build on top of this work and add three important contributions: we introduce
 
 ## Reinforcement Learning to Maximise Evolutionary Fitness
 
-Evolutionary pressure acts on the replicator level, but reinforcement learning acts on the agent level.  RL can be aligned with the evolutionary process by noting what evolution does to the agents through its selection of replicators: evolution generates agents with increasing capabilities to maximise the survival and reproduction success of the replicators they carry. So that's what our RL algorithm should do as well.
+Evolutionary pressure acts on the replicator level, but reinforcement learning acts on the agent level. RL can be aligned with the evolutionary process by noting what evolution does to the agents through its selection of replicators: evolution generates agents with increasing capabilities to maximise the survival and reproduction success of the replicators they carry. So that's what our RL algorithm should do as well.
 
 From the replicator’s perspective, the evolutionary process is a constant competition for resources. However, from the agent’s perspective, the evolutionary process is a mix between a cooperative exercise with agents that carry some of its replicators (its family) and a competition with unrelated agents. Evolution pressures agents to engage in various degrees of collaboration depending on the degree of kinship between them and the agents they interact with (depending on the amount of overlap between the replicators they carry). This pressure for cooperation amongst relatives was named kin selection, and was informally summarised by J.B.S. Haldane that has jokingly said "I would gladly lay down my life for two brothers or eight first cousins" (alluding to the fact that in humans, and other diploid species, siblings have on average half of the genes identical by descent, whilst first cousins have on average one eighth, therefore, from the genes perspective sacrificing an individual to save two siblings or eight first cousins is a fair deal, evolutionary speaking).
 

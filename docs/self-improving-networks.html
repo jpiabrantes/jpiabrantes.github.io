@@ -122,7 +122,7 @@
 <h2 id="markets-for-generative-ai">Markets for Generative AI</h2>
 <p>In the past, RL shined on games like Atari and Chess where the set of actions is known and fixed. In the age of Generative AI, action spaces have become infinite: including endless variations of text, code and function calls. This is the age when markets will shine.</p>
 <p>To give a concrete example. Imagine a user posts a request offering &#36;10 for the best response: “Plan a three-day tour of Lisbon”. This is our initial state (<script type="math/tex">s_0</script>). Multiple models believe that they can add value to this state and submit bids. Certainly, the Trip Advisor model is confident it knows a lot about Lisbon and submits a high bid. However, at this stage, the model that best understands the user's tastes and preferences has the most value to contribute. Turns out, our user keeps a diary in Notion, giving the Notion model extra confidence to submit a high bid and make it win the auction. The next state reads as the additional information:</p>
-<div class="codehilite"><pre><span></span><code>the user has the following preferences:
+<div class="highlight"><pre><span></span><code>the user has the following preferences:
 - avoid tourist traps, sightseeings or anything mainstream
 - prefers to explore activities that locals themselves do
 - preference to skill-based or learning activities over passive entertainment (e.g. watching a show)

@@ -1,7 +1,6 @@
 ---
 template: post
 title: What evolution tells us about how to brainstorming?
-slug: how-to-brainstorm
 draft: false
 date: 2021-12-23T14:49:15.809Z
 description: >-
@@ -9,6 +8,7 @@ description: >-
   about how to speed up that process.
 category: memetics
 ---
+
 Brainstorming is about evolving ideas from stupid to good.
 
 Evolving is the key word. In this post, I think out loud about what Memetic Evolution can tell us on how to evolve stupid ideas into good ones, faster.

@@ -1,7 +1,6 @@
 ---
 template: post
 title: Can AI optimise governments?
-slug: government-optimisation
 draft: false
 date: 2020-01-28T13:44:46.496Z
 description: >-
@@ -12,6 +11,7 @@ description: >-
   how such a simulator could work.
 category: Governance
 ---
+
 <style>
 
 p {
@@ -63,7 +63,7 @@ Imagine having an hyper realistic "SimCity" simulation that would show us the be
 </ul>
 </div>
 
-## 
+##
 
 ## The Role of the Government
 
@@ -77,7 +77,7 @@ Driving gives us a quick concrete example of this. If everyone was to drive at a
 
 Governance is generally a service provided by our governments. Some people pay a high price for this service and they don’t get much value in return. They wish to change their service operator but changing governments, if possible, has a big cost as it often requires people to move to a different nation. Whenever there is a big monopoly people’s choice is limited and the quality of the service provided is lower. Is there a way to give more options to the people?
 
-Paul Romer, Nobel laureate in Economics, defends the creation of many independently governed cities (called charter cities) as a way to explore and find better governing rules. In summary, a charter city would have a charter (a set of governing rules) and it would be built on a piece of uninhabited land. People would be allowed to move in and out of the city as they please. Setting rules on uninhabited places should lead to a much easier and faster process than to change rules on populated places where many would have different interests and opinions regarding those rules. The idea is to have a high number of charter cities, with different sets of rules, competing for citizens. The most successful cities would naturally expand while the less successful would adapt or die. 
+Paul Romer, Nobel laureate in Economics, defends the creation of many independently governed cities (called charter cities) as a way to explore and find better governing rules. In summary, a charter city would have a charter (a set of governing rules) and it would be built on a piece of uninhabited land. People would be allowed to move in and out of the city as they please. Setting rules on uninhabited places should lead to a much easier and faster process than to change rules on populated places where many would have different interests and opinions regarding those rules. The idea is to have a high number of charter cities, with different sets of rules, competing for citizens. The most successful cities would naturally expand while the less successful would adapt or die.
 
 Paul argues that the biggest barrier for raising the living standards, in this century, is not scarce resources nor limited technologies but our limited capacity to discover and implement new governing rules<sup>\[1]</sup>. These rules need to be adapted as the scale of our cities and available technologies improve. The set of rules that enable citizens of a small village to live in harmony will be very different from the rules that allow millions of us to live within dense cities with access to powerful technologies. We recommend you watching Paul’s [TED talk](https://www.ted.com/talks/paul_romer) about this subject where he builds a very convincing case for charter cities and points to a few extremely successful examples in our history. Another fascinating project is the [Seastanding](https://www.seasteading.org/)<sup>\[2]</sup> that wants to build competing governing cities that float on international waters.
 
@@ -97,7 +97,7 @@ There is a universal truth that helps us describe stable systems: better things 
 
 We’ve been assuming that society’s members are self-interested but we haven’t yet defined what are they self-interested in. Is it food? Shelter? Money? Power? Love? Sex? It could be all of that, but none of that matters if it doesn’t make them better replicators. Evolution has been picking the best biological replicators for a long time. It turns out that having a brain that pursues and feels pleasure when it finds food, shelter, money, sex or power increases an individual replication success. Our world is now evolving at a much faster pace and our biology sometimes struggles to keep up. Some of our biological hard-coded pleasures often feel outdated as they can in-fact decrease our reproduction abilities. We now live in a world where companies provide us with high-caloric food, contraceptives, video games, porn and drugs that exploit our biological pleasures for profit. In fact, business plans are another type of replicator that consumes a common limited-resource (capital) in order to grow and replicate. It turns out that exploiting human biology is extremely profitable, and therefore, it leads to business plans that are good at self-replicating. So, we will be seeing more of those in the future.
 
-Biological pleasure is a means to an end but not the end itself. Pursuing biological pleasure happens because on average it increases the replication success, when that stops being true the biological pleasures evolve to something else. Similarly, pursuing moral behaviour will increase the replication success of people and businesses. Amoral businesses may lose clients and investors, whilst amoral people may lose partners and friends. The higher the society’s education is on its values and ideology the more this will be true, as Elinor Ostrom (Nobel laureate) pointed out: when we share common notions of acceptable behaviour, we achieve order more efficiently than active policing. However, replicators that are able to trade-off moral behaviour for higher evolutionary fitness will eventually corrupt society. A moral business that pays its taxes will see its market share go to amoral competitors who rely on tax havens to evade taxes and reduce their product prices. Moral consumers may choose to stop buying products from tax-evading businesses and buy the more expensive moral alternative instead. Unfortunately, amoral people could secretly choose to purchase the cheaper products and save money for other useful things for self-replication. The system is starting to feel unstable. This is where the government kicks in. The role of the government is to enforce rules that make selfish behaviour equivalent to altruistic behaviour. Selfish behaviour equivalent to moral behaviour. 
+Biological pleasure is a means to an end but not the end itself. Pursuing biological pleasure happens because on average it increases the replication success, when that stops being true the biological pleasures evolve to something else. Similarly, pursuing moral behaviour will increase the replication success of people and businesses. Amoral businesses may lose clients and investors, whilst amoral people may lose partners and friends. The higher the society’s education is on its values and ideology the more this will be true, as Elinor Ostrom (Nobel laureate) pointed out: when we share common notions of acceptable behaviour, we achieve order more efficiently than active policing. However, replicators that are able to trade-off moral behaviour for higher evolutionary fitness will eventually corrupt society. A moral business that pays its taxes will see its market share go to amoral competitors who rely on tax havens to evade taxes and reduce their product prices. Moral consumers may choose to stop buying products from tax-evading businesses and buy the more expensive moral alternative instead. Unfortunately, amoral people could secretly choose to purchase the cheaper products and save money for other useful things for self-replication. The system is starting to feel unstable. This is where the government kicks in. The role of the government is to enforce rules that make selfish behaviour equivalent to altruistic behaviour. Selfish behaviour equivalent to moral behaviour.
 
 <highlight>evolution changes our biological pleasures and corrupts our societies based on our natural environment and our artificial rules</highlight>
 
@@ -105,7 +105,7 @@ Biological pleasure is a means to an end but not the end itself. Pursuing biolog
 
 ## How do Behaviours Spread?
 
-Societies are defined by their people and businesses behaviours. Therefore, we are interested in studying how policies (also known as strategies) evolve. 
+Societies are defined by their people and businesses behaviours. Therefore, we are interested in studying how policies (also known as strategies) evolve.
 
 <latexcenter>$$p_i(a|s)$$</latexcenter>
 
@@ -117,7 +117,7 @@ Genes are able to encode policies. Beavers removed from their parents at birth w
 
 Ideas or behaviours that spread through non-genetic means such as writing, speech, and gestures can be called memes. The term was coined by Richard Dawkins in The Selfish Gene<sup>\[4]</sup> and defined as the unit for carrying cultural ideas or practices that can self-replicate by being transmitted from one mind to another. The study of memes and its replication mechanisms was named memetics. As an example, through the lens of memetics, the success of religions can be explained by their members' ability to hold and spread their beliefs. In fact, the promise of heaven to believers and hell to non-believers provides a strong incentive for members to retain their belief and convert others. Believers see conversions as saving non-believers’ souls from eternal damnation - a religious duty (selfish) and an altruistic act.
 
-**2<sup>nd</sup> principle:** the _society-simulator_ should focus on simulating policies: how they start, spread and die. This is complex, because policies replicate through people and businesses by different mechanisms which include genetics, memetics and business mechanisms. 
+**2<sup>nd</sup> principle:** the _society-simulator_ should focus on simulating policies: how they start, spread and die. This is complex, because policies replicate through people and businesses by different mechanisms which include genetics, memetics and business mechanisms.
 
 ## The Society Simulator
 
@@ -127,24 +127,24 @@ We now propose a framework for the _society-simulator_:
 <img src="static/img/optimise_gov/airuler.png" alt="drawing" style="width:85%;margin:auto;display:block;"/>
 </p>
 
-Our simulator is a multi-agent system with two types of entities: the Ruler (government) and the self-interested agents (citizens and businesses). 
+Our simulator is a multi-agent system with two types of entities: the Ruler (government) and the self-interested agents (citizens and businesses).
 
 They live in a simulated environment that contains two types of rules:
 
-* The static natural rules from physics and biology: how a citizen can move in the world, give birth, transform resources, build products, consume resources, die, and so on.
-* The governing rules that provide incentives and penalties for certain behaviours, these include taxes, subsidies, fines, access to public infrastructures, and so on.
+- The static natural rules from physics and biology: how a citizen can move in the world, give birth, transform resources, build products, consume resources, die, and so on.
+- The governing rules that provide incentives and penalties for certain behaviours, these include taxes, subsidies, fines, access to public infrastructures, and so on.
 
 Citizens and businesses are born with adaptable policies and can interact with their virtual environment through an observation and an action space:
 
-* **Observation space:** vision, internal state of the citizen (health, age, energy) or internal state of the business (employees, debt, profits), etc.
-* **Action space:** move, trade, negotiate, mate, consume, etc.
+- **Observation space:** vision, internal state of the citizen (health, age, energy) or internal state of the business (employees, debt, profits), etc.
+- **Action space:** move, trade, negotiate, mate, consume, etc.
 
 The distribution of policies is naturally evolving: policies that are able to survive and spread will be a part of the future whilst the less capable policies disappear.
 
 The Ruler attempts to drive the course of (policy) evolution by changing the governing rules. To do that we first need to translate society’s target ideology into an objective function such as: achieve the most uniform wealth distribution whilst maximising wealth per capita, life expectancy and citizen’s privacy. The Ruler's task is to optimise the given objective function. It interacts with the world through its own observation and action space:
 
-* **Observation space:** macro-statistics such as wealth distribution, tax evasion rate, population literacy, crime rates, etc. 
-* **Action space:** governing rules.
+- **Observation space:** macro-statistics such as wealth distribution, tax evasion rate, population literacy, crime rates, etc.
+- **Action space:** governing rules.
 
 The framework will optimise both the governing rules ability to achieve a given ideology and the self-interested policies ability to spread. By doing so, we now have a way to search for the best set of governing rules able to produce an evolutionarily stable society; a society where policies that deviate from its ideology have an evolutionary disadvantage.
 

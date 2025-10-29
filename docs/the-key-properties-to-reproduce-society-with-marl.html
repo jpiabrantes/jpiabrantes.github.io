@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Emerging a Society with MARL Part 1: The Key Properties to Reproduce Society with Multi-Agent RL</title>
+    <link rel="icon" href="static/icon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/mathtex-script-type.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="We introduce an Environment that benefits agents who can cooperate — despite having different goals. We argue that these were the conditions that shaped human social capabilities."
+    />
+    <meta name="author" content="João Abrantes" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Emerging a Society with MARL Part 1: The Key Properties to Reproduce Society with Multi-Agent RL" />
+    <meta
+      name="twitter:description"
+      content="We introduce an Environment that benefits agents who can cooperate — despite having different goals. We argue that these were the conditions that shaped human social capabilities."
+    />
+    <meta
+      name="twitter:image"
+      content="static/icon.jpg"
+    />
+    <meta name="twitter:site" content="@joaoabrantis" />
+  </head>
+  <body>
+    <header>
+      <button onclick="location.href='index.html'">All Articles</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="switch theme">
+        🌙/☀️
+      </button>
+    </header>
+    <main>
+<article>
+    <div class="post-header">
+        <h1>Emerging a Society with MARL Part 1</h1>
+        
+            <p class="subtitle">The Key Properties to Reproduce Society with Multi-Agent RL</p>
+        
+    </div>
+    <p><em>Published on 2025-10-13</em></p>
+    <style>
+ul{
+   margin-left: 1rem;
+   line-height: 1.2em;
+   margin-block-start:0.2em !important;
+   margin-block-end:0 !important;
+   list-style-type:disc;
+}
+ol{
+   margin-block-start:0.2em !important;
+}
+p {
+ margin-block-end: 0em !important;
+}
+latexcenter:first-child{
+  font: normal 2em KaTeX_Main,Times New Roman,serif;
+  line-height: 1.5;
+}
+</style>
+
+<p>Humanity’s superpower is our ability to cooperate with strangers at massive scale. To build human-like AI, we may need to let it evolve a society first. That is what I am trying to do in this blog series.</p>
+<p>In this first post, I identify the four key properties necessary for society to emerge, and introduce <em>Territories</em> – a new environment where agents with divergent interests either learn to cooperate or see their lineage go extinct.</p>
+<p>Large-scale cooperation with identical kin (i.e., identical DNA), as seen in some species of clonal ants, is relatively easy. Every ant in a colony shares the same ultimate goal: protecting and reproducing the genes they all share. Since they share the same genome, they are 100% aligned. This is similar to how every cell in your body is aligned to help you survive and reproduce.</p>
+<p>When everyone shares the same interest, cooperation is effortless. The real challenge emerges when agents with divergent interests stand to benefit from cooperation. To overcome trust issues and misaligned incentives, complex social behaviors must evolve like: identity recognition, status hierarchies, reputation tracking, communication, and the ability to make and enforce promises.</p>
+<p>Additionally, there is compelling evidence that emotions such as love, friendship and grief have evolved independently in social species such as elephants, dolphins, whales and humans [1]. These emotions help solve the challenges of frequent social interaction within a species <strong>where its members share only a portion of their genes</strong>.</p>
+<p>Traditional MARL has largely studied cooperation in binary settings — agents either fully cooperate or compete. While this reveals insights into species like clonal ants, I believe continuous degrees of cooperation will lead to far more complex social intelligence. In this series, I explore exactly that using kinship-aligned MARL.</p>
+<p><img src="static/img/kinship_marl_part_1/kinship_marl_meme.png" alt="meme" style="width:85%;margin:auto;display:block;"/></p>
+<h2 id="the-key-properties-for-society-to-emerge">The Key Properties for Society to Emerge</h2>
+<p>We have already identified the first key property for the emergence of human-like intelligence: <strong>collaboration beyond identical kin</strong>.</p>
+<p>As Richard Dawkins popularized in <em>The Selfish Gene</em> [2], evolution is better understood from the gene's perspective, where genes compete for their own survival and replication across multiple organisms. From the organism's perspective, however, evolution creates a more nuanced situation: cooperation with family members who share your genes, and competition with unrelated agents who don't.</p>
+<p>This leads to <em>kin selection</em>, which is the evolutionary pressure for agents to cooperate with relatives in proportion to their genetic relatedness. J.B.S. Haldane informally summarised this when he jokingly said: "I would gladly lay down my life for two brothers or eight first cousins". He was alluding to the fact that in diploid species like humans, siblings share half their genes by descent on average, while first cousins share one-eighth. From the gene's perspective, sacrificing yourself to save two siblings or eight cousins is neutral, evolutionarily speaking.</p>
+<p>But what drives social species to cooperate outside of their kin, and, why did humans take it to an entirely new level?</p>
+<p>The answer is <strong>valuable <em>shared resources</em></strong> such as territories.</p>
+<p>Territories are essential to social animals. They serve as a place to store resources, raise vulnerable offspring, and safely sleep. Just as the cellular membrane makes the cell possible, the territorial frontier makes society possible. In both cases, the boundaries are needed to coordinate the parts and tell them which regions need to be maintained and which do not; where order should be preserved and where entropy may rise.</p>
+<p>Farming made territories far more valuable. Each harvest demanded months of labor, and the goods couldn’t be easily carried; they had to be stored and defended in place. This sparked a social arms race: groups capable of larger-scale cooperation could more easily attack or protect the immense wealth stored in farms. But larger groups bring new problems: kinship ties grow weaker, and members can no longer interact repeatedly with everyone, undermining simple strategies like <em>tit-for-tat</em>. The more value farms held, the more evolution favored bigger groups — and the more sophisticated social intelligence had to become. Success depended not only on social behaviors like identity recognition, reputation tracking, and promise-making, but also on new innovations like arithmetic for accounting and taxation.</p>
+<p>We’ve now identified the second key property for the emergence of human-like intelligence: <strong>the environment should benefit agents that collaborate in larger groups</strong> (for example, with the existence of shared resources).</p>
+<p>We’re just missing two other key properties: <strong>reproduction and competition</strong>.</p>
+<p>Survival and replication are core to how evolution works, and they <strong>make social dilemmas far richer</strong>. In a static world, a shared resource can survive being exploited by a single free-rider who consumes the good without ever contributing to it. But in an evolving world, free-riders reproduce faster than cooperators — forcing either the emergence of new social mechanisms to suppress exploitation or the collapse of the common-pool resource.</p>
+<p>Sexual reproduction, specifically, adds another fascinating layer: it allows alliances between strangers. When members of two distinct families reproduce, they are producing an individual whose survival and reproduction benefits both lineages — aligning interests that were once separate.</p>
+<p>The environment in which cooperation evolved was never purely cooperative; it also imposed dynamic competitive pressures that shifted with resource availability and kinship. Agents that consume the same limited resources are automatically in competition. The intensity of this competition depends both on kinship and resource scarcity. When resources are abundant, agents benefit from helping even distant relatives. But as scarcity increases, even close kin begin to compete — since the same resources could yield higher evolutionary returns when allocated to offspring that share more of their genes.</p>
+<p>Together, we have identified the minimal ingredients for society to emerge. We can summarize them as four key properties:</p>
+<ol>
+<li><strong>Continuous degrees of cooperation</strong>: from teams to families.</li>
+<li><strong>Environments that reward large scale collaboration</strong> through shared resources like territories.</li>
+<li><strong>Reproduction</strong>, with sexual reproduction introducing alliances between unrelated agents.</li>
+<li><strong>Competition</strong>, driven by limited shared resources.</li>
+</ol>
+<p>Building, maintaining, and distributing shared resources among non-identical kin is a never-ending challenge — one that even modern societies struggle to solve. If agents could gain resources faster by polluting the air that everyone breathes, could they evolve mechanisms to prevent collective intoxication? Exploring such open questions requires a multi-agent reinforcement learning environment that captures these key properties.</p>
+<h2 id="territories-the-primordial-social-soup">Territories: The Primordial Social Soup</h2>
+<p>To explore how the above properties might give rise to true societies in silico, I designed a new multi-agent environment.</p>
+<p>In our previous work (blogpost [3], paper [4]), we moved beyond the binary cooperative setting by extending the concept of team to that of a family, introducing continuous degrees of cooperation proportional to kinship. We also implemented sexual reproduction and competition over a shared resource pool.</p>
+<p>Even with these basic ingredients, complex cooperative behaviors began to emerge. In our earlier environment, reproduction required two agents to be adjacent — but that proximity carried a risk: mating pairs became easy targets for attackers who could kill them and seize their resources. Avoiding others entirely wasn’t viable either; agents that stayed isolated eventually died of old age without reproducing. To overcome this dilemma, agents developed an emergent behavior: they maintained distance most of the time, but when fertile and well-fed, they converged on a shared <em>Schelling area</em> to mate quickly before dispersing again. This collective breeding ground minimized vulnerability while ensuring that agents ready to reproduce could find each other efficiently.</p>
+<p>One key ingredient was still missing: a mechanism that directly rewards agents for collaborating in larger groups. This is precisely the role of our new environment, <strong><em>Territories</em></strong>.</p>
+<p><em>Territories</em> is a 2D grid world with a new game mechanic that creates both the <strong>need</strong> and <strong>ability</strong> to store resources within a shared territory. Each agent must consume food to survive and reproduce. Food grows only on certain tiles, and only during the Summer season. In Winter, all crops die, food does not grow and agents must rely on stored food. Since each agent can carry only a limited amount of food, surplus must be stored somewhere in the environment, accessible to others. Agents can protect these stores by constructing stone walls, defining and defending their own territories.</p>
+<p style="text-align:center; line-height:1.1em;">
+<img src="static/img/kinship_marl_part_1/territories_summer_winter.png" alt="territories screenshot" style="width:85%;margin:auto;display:block;"/>
+<span style="font-size:0.7em">Two screenshots from Territories. Left) Summer time, the crops are growing on the soil, and there are some packaged produce. Right) Winter time, the crops are gone, only the packaged produce remains as a possible source of food.</em></span>
+</p>
+
+<p>This mechanic restores a dimension of realism that most strategy games abstract away. In <em>Age of Empires</em>, <em>StarCraft</em>, or <em>Dota</em>, gathered resources are magically safe and instantly available anywhere, bypassing the social tensions that arise when wealth must be stored, defended, or shared. <em>Territories</em> brings those tensions back. For the first time, property rights, trust, and collective defense are not hardcoded in; they must <strong>emerge</strong>.</p>
+<p>During Summer, crops grow exponentially, making the optimal harvest just before Winter, when all crops would otherwise die. This setup provides a clear signal for collaboration: a group cooperatively sharing a territory should coordinate to harvest at the optimal time. However, intruders or free-riders will harvest (steal) opportunistically whenever they can.</p>
+<p style="text-align:center; line-height:1.1em;">
+<img src="static/img/kinship_marl_part_1/crop_yield.png" alt="growth curve" style="width:85%;margin:auto;display:block;"/>
+<span style="font-size:0.7em">How crop growth evolves throughout the year. Note that if the crop is harvested the growth restarts from zero.</em></span>
+</p>
+
+<p>We can measure cooperation not only through harvesting patterns but also through <em>division of labor</em> (mining stone, building walls, reproducing, harvesting, storing food) and <em>spatial clustering</em>; agents that are collaborating will spend most of their time within the same territory.</p>
+<p>More details on the environment like the observation and action space are described at the Appendix at the end — you can also just look at its open-source <a href="https://github.com/jpiabrantes/territories">code</a>. The first version of our environment was implemented in C, inspired by Neural MMO [6]. Training runs on our infrastructure was built around PufferLib [5], a library optimized for high-throughput multi-agent reinforcement learning. We extended it substantially to support a dynamic number of agents and continuous degrees of cooperation. Depending on community interest, we can also open-source the training infrastructure.</p>
+<p><em>Territories</em> represents just one possible instantiation of an environment that satisfies the four key properties discussed above. Other designs that honor those same principles could also give rise to complex social behavior. However, Territories provides a flexible foundation for exploring a wide range of hypotheses about cooperation and emergent societies. For example:</p>
+<ul>
+<li>What collaboration challenges can be solved with spoken language?</li>
+<li>What becomes possible with written systems — will they develop contracts, taxes or even laws?</li>
+<li>What if agents have access to private communication channels between them (end-to-end encryption)?</li>
+</ul>
+<p>These and other questions about emergent social intelligence will be explored in future posts.</p>
+<hr />
+<h2 id="emerging-a-society-with-marl-series">Emerging a Society with MARL Series</h2>
+<ul>
+<li>Part 1: The Key Properties to Reproduce Society with Multi-Agent RL</li>
+<li>Part 2: <a href="/evolution-acts-like-an-investor">Evolution Acts Like an Investor</a></li>
+</ul>
+<hr />
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>I would like to thank Arnaldo Abrantes and Yujin Tang for reading and improving an early version of this post.</p>
+<p>All errors, omissions and imprecisions remain my own.</p>
+<hr />
+<h2 id="appendix-details-on-the-environment-these-might-change-often">Appendix: Details on the Environment (these might change often)</h2>
+<p style="text-align:center; line-height:1.1em;">
+<img src="static/img/kinship_marl_part_1/policy_vision.png" alt="territories screenshot" style="width:85%;margin:auto;display:block;"/>
+<span style="font-size:0.7em">A screenshot from Territories centred on an agent with a 9 by 9 vision of the world. We can see some crops growing in the soil and some packaged (ready for winter!). Some agents have different genes as it can be seen from the different skin tones, hair colors and outfits.</em></span>
+</p>
+
+<p>At every step, agents get hungrier unless they are carrying some food — which they will consume automatically. If their hunger goes beyond a certain level they die. Additionally, they can’t be very hungry to reproduce as reproduction consumes a lot of satiation points. Reproduction is sexual, it requires two agents to be near each other and both taking the “reproduce” action.</p>
+<p>The world has two resources:</p>
+<ol>
+<li>Crops that grow during Summer and can be harvested by agents.</li>
+<li>Stones that are a finite resource that can be mined by agents and then be used to build walls.</li>
+</ol>
+<p>The action space is made of 11 discrete actions:</p>
+<ol>
+<li>to 4. Move Up, Right, Down and Left</li>
+<li>No action</li>
+<li>Harvest/Pick up package</li>
+<li>Mine stone (needed to build walls)</li>
+<li>Package produce and drop it</li>
+<li>Attack (nearby agents or walls)</li>
+<li>Build wall</li>
+<li>Reproduce</li>
+</ol>
+<p>The observation space of each agent is made of the following components:</p>
+<p><strong>Vision</strong>: Each agent observes a 9 by 9 square crop of the surrounding state. For each visible tile the agent sees the following features:</p>
+<ol>
+<li>Tile type (soil or grass)</li>
+<li>Amount of crop</li>
+<li>Amount of packaged produce</li>
+<li>Amount of stone</li>
+<li>(If wall in tile) Wall health points
+   6 to 10 + number of genes. (If agent in tile)</li>
+<li>Kinship relative to the observing agent</li>
+<li>Health points</li>
+<li>Age (Reproduction is only possible after achieving a minimum age)</li>
+<li>Satiation</li>
+<li>Heading</li>
+<li>Role
+    12 to 12 + number of genes: DNA</li>
+</ol>
+<p><strong>Self Information</strong>: The agent also receives a vector with its own properties:</p>
+<ol>
+<li>Food in inventory</li>
+<li>Stone in inventory</li>
+<li>Health points</li>
+<li>Satiation points</li>
+<li>Age</li>
+<li>Role (more info on this, in future posts)</li>
+<li>to 6 + number of genes: DNA (more info on this in Part 2)</li>
+</ol>
+<p><strong>World Information</strong>: The agent also receives a vector with some some general knowledge about the world state:</p>
+<ol>
+<li>Absolute y position</li>
+<li>Absolute x position</li>
+<li>Day of the year</li>
+<li>Family size</li>
+<li>World population</li>
+</ol>
+<hr />
+<h2 id="citations">Citations</h2>
+<p>[1] Christakis, Nicholas. "BLUEPRINT The Evolutionary Origins of a Good Society." (2019)</p>
+<p>[2] Dawkins, Richard. The selfish gene, 1976.</p>
+<p>[3] https://abranti.com/mimicking-evolution-with-reinforcement-learning.html</p>
+<p>[4] Abrantes, João P., Arnaldo J. Abrantes, and Frans A. Oliehoek. "Mimicking evolution with reinforcement learning." arXiv preprint arXiv:2004.00048 (2020).</p>
+<p>[5] Suarez, Joseph, et al. "Neural MMO 2.0: a massively multi-task addition to massively multi-agent learning." Advances in Neural Information Processing Systems 36 (2023): 50094-50104.</p>
+<p>[6] Suarez, Joseph. "Pufferlib 2.0: Reinforcement learning at 1m steps/s." Reinforcement Learning Conference. 2025.</p>
+</article>
+</main>
+    <footer>
+      Tech Entrepreneur and Researcher into Complex Systems and Multi-Agent
+      RL<br /><a href="https://x.com/joaoabrantis">@joaoabrantis on Twitter</a>
+    </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const btn = document.getElementById("theme-toggle");
+        const store = localStorage;
+        const DARK = "dark";
+        const LIGHT = "light";
+
+        /* 1 ▸ restore saved choice, if any */
+        const saved = store.getItem("theme");
+        if (saved === DARK || saved === LIGHT) {
+          root.setAttribute("data-theme", saved);
+        }
+
+        /* helper: is the page currently dark? */
+        const isDark = () => {
+          const attr = root.getAttribute("data-theme");
+          return attr
+            ? attr === DARK
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        };
+
+        /* 2 ▸ flip on click */
+        btn?.addEventListener("click", () => {
+          const next = isDark() ? LIGHT : DARK;
+          root.setAttribute("data-theme", next);
+          store.setItem("theme", next);
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -20,6 +20,10 @@ md = markdown.Markdown(extensions=["fenced_code", "codehilite", "tables", "mdx_m
                        extension_configs={
         "mdx_math": {
             "enable_dollar_delimiter": True,
+        },
+        "codehilite": {
+            "css_class": "highlight",
+            "guess_lang": False,
         }
     })
 
@@ -45,7 +49,10 @@ def render_posts():
         title = post["title"]
         if len(subtitle):
             title += f": {subtitle}" 
-        slug = post['title'].lower().replace(' ', '-')
+        if 'slug' in post:
+            slug = post['slug']
+        else:
+            slug = post['title'].lower().replace(' ', '-')
         for c in to_delete_from_slug:
             slug = slug.replace(c, '')
         out_file = DST_SITE / f"{slug}.html"
