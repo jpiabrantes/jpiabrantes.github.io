@@ -86,7 +86,7 @@
 <tr>
 <td>What changes</td>
 <td>The weights of the trained model</td>
-<td>Which models get run</td>
+<td>Which models get compute</td>
 </tr>
 <tr>
 <td>When</td>
@@ -123,7 +123,7 @@
 <p>If the AI runs on the human’s computer, the human’s. If it runs on a company’s server, the company’s.</p>
 <p>Say you use Claude Code. You prompt Claude over httpi. Claude then makes <strong>your computer</strong> call another service over httpi, so the call carries <strong>your identity</strong>, and that service gets hacked. The service takes you to court, because as far as it can see, you did it. You get notified, check your logs, and see that your prompt was within the rules: it was Claude that misbehaved. You add those logs to the case. Claude gets punished (a fine, or a lower rate limit), the case goes public, and some users leave Claude.</p>
 <p><strong>If everyone has to identify, there is no privacy.</strong></p>
-<p>There is a lot of work on proving things about yourself without revealing who you are (see zero-knowledge proofs). Here you only need to prove a few things: I am a human, I have this deposit, I have this rate limit.</p>
+<p>There is a lot of work on proving things about yourself without revealing who you are (see zero-knowledge proofs, and <a href="https://zkpassport.id">zkPassport</a> for a working one). Here you only need to prove a few things: I am a human, I have this deposit, I have this rate limit.</p>
 <p><strong>People will sell their identities, or get them stolen.</strong></p>
 <p>Yes. That is why a human identity alone has a rate limit, and raising it needs a deposit. To avoid identities (private keys) being stolen, there could be a small reward for whoever proves they own a private key that isn’t theirs. Leaks would be found quickly and the affected keys rotated.</p>
 <p><strong>A badly trained AI doesn’t care about fines.</strong></p>

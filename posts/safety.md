@@ -33,7 +33,7 @@ To apply this to AI we need to step up from RL to mechanism design. Instead of u
 | ----------------- | -------------------------------- | ------------------------------- |
 | Consequences      | Virtual: a reward number         | Physical: more or less compute  |
 | Credit assignment | Which tokens caused the outcome  | Which agents caused the outcome |
-| What changes      | The weights of the trained model | Which models get run            |
+| What changes      | The weights of the trained model | Which models get compute        |
 | When              | Only during training             | Every day the agent runs        |
 | Needs             | Access to the weights            | Identity and logs               |
 
@@ -83,7 +83,7 @@ Say you use Claude Code. You prompt Claude over httpi. Claude then makes **your 
 
 **If everyone has to identify, there is no privacy.**
 
-There is a lot of work on proving things about yourself without revealing who you are (see zero-knowledge proofs). Here you only need to prove a few things: I am a human, I have this deposit, I have this rate limit.
+There is a lot of work on proving things about yourself without revealing who you are (see zero-knowledge proofs, and [zkPassport](https://zkpassport.id) for a working one). Here you only need to prove a few things: I am a human, I have this deposit, I have this rate limit.
 
 **People will sell their identities, or get them stolen.**
 
